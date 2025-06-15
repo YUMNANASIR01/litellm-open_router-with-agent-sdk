@@ -5,9 +5,8 @@ from agents import Agent, Runner, set_tracing_disabled
 from agents.extensions.models.litellm_model import LitellmModel 
 import litellm
 
-litellm.disable_aiohttp_transport = True
-
 load_dotenv()
+litellm.disable_aiohttp_transport = True
 set_tracing_disabled(disabled=True)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
